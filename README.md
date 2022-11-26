@@ -84,14 +84,14 @@ The following is a brief description of the problem and system flow
   10. Teachers must first be registered by the super admin
   11. Materials and quizzes are daily in nature while tests are weekly
 ```
-* Technology used:
-```sh
-1. Java 8 Spring Boot
-2.Angular 9
-3.Postgresql 11
-4. JWTs
-5. Jasper Reports
-```
+* Technology used :
+  ```sh
+  1. Java 8 Spring Boot
+  2.Angular 9
+  3.Postgresql 11
+  4. JWTs
+  5. Jasper Reports
+  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -243,7 +243,7 @@ I've included a few of resources that i find helpful:
 [issues-shield]: https://img.shields.io/github/issues/rezimaulana/e-learning.svg?style=for-the-badge
 [issues-url]: https://github.com/rezimaulana/e-learning/issues
 [license-shield]: https://img.shields.io/github/license/rezimaulana/e-learning.svg?style=for-the-badge
-[license-url]: https://github.com/rezimaulana/e-learning/blob/master/LICENSE.txt
+[license-url]: https://github.com/rezimaulana/e-learning/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/rezimaulana
 [product-screenshot]: assets/images/screenshot.png
