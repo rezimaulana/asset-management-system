@@ -1,0 +1,50 @@
+<div class="container-fluid bg-light">
+
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-5">
+                <div class="card-header">Jadwal Ujian</div>
+                <div class="card-body">
+                    <a routerLink="/exam/instructor/class-hdr/{{classHdrId}}/material/"
+                        class="btn btn-secondary">Back</a>
+                    <a routerLink="/exam/instructor/class-hdr/{{classHdrId}}/material/{{materialId}}/schedule/new"
+                        class="btn btn-primary">Create</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Kode</th>
+                                    <th>Subjek</th>
+                                    <th>Waktu Mulai</th>
+                                    <th>Waktu Akhir</th>
+                                    <th>Aktif</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let d of examScheduleListResDto.data ; index as i">
+                                    <td>{{i+1}}</td>
+                                    <td>{{d.examCode}}</td>
+                                    <td>{{d.examSubject}}</td>
+                                    <td>{{d.startTime | date:'HH:mm:ss dd/MM/yyyy'}}</td>
+                                    <td>{{d.endTime | date:'HH:mm:ss dd/MM/yyyy'}}</td>
+                                    <td>{{d.isActive}}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a routerLink="/exam/instructor/class-hdr/{{classHdrId}}/material/{{materialId}}/schedule/{{d.id}}/attendance"
+                                                class="btn btn-secondary">Absensi</a>
+                                            <a routerLink="/exam/instructor/class-hdr/{{classHdrId}}/material/{{materialId}}/schedule/{{d.id}}/collection"
+                                                class="btn btn-secondary">Koleksi Jawaban</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

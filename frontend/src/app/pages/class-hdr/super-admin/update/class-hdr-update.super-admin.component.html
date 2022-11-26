@@ -1,0 +1,63 @@
+<div class="container-fluid bg-light">
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card">
+                <div class="card-header">Perbarui Kelas</div>
+                <div class="card-body">
+                    <a routerLink="/class-hdr/super-admin" class="btn btn-secondary mb-4">Kembali</a>
+                    <form class="row">
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="subject" class="form-label">Subjek<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="text" name="subject" id="subject" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="description" class="form-label">Deskripsi<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <textarea name="description" id="description" class="form-control"></textarea>
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="file" class="form-label">Logo<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="file" name="file" id="file" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="instructorId" class="form-label">Guru<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <select name="instructorId" id="instructorId" class="form-select">
+                                <option>Pilih Guru</option>
+                                <option value="1">yanuar@email.com</option>
+                                <option value="2">aldi@email.com</option>
+                                <option value="3">anasda@email.com</option>
+                                <option value="4">ghani@email.com</option>
+                                <option value="5">gilang@email.com</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="isActive" class="form-label">Aktif<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input class="form-check-input" type="radio" name="isActive" id="true" checked>
+                            <label class="form-check-label" for="true">
+                                True
+                            </label>
+                            <input class="form-check-input" type="radio" name="isActive" id="false">
+                            <label class="form-check-label" for="false">
+                                False
+                            </label>
+                        </div>
+                        <div class="col-md-12 mt-4 mb-1">
+                            <button class="btn btn-primary" type="button" id="updateClasses">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

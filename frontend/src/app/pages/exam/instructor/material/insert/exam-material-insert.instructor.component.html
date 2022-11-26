@@ -1,0 +1,54 @@
+<div class="container-fluid bg-light">
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-3">
+                <div class="card-header">Tambah Materi</div>
+                <div class="card-body">
+                    <a routerLink="/exam/instructor/class-hdr/1/material/" class="btn btn-secondary mb-4">Kembali</a>
+                    <form class="row">
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="examCode" class="form-label">Kode<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="text" name="examCode" id="examCode" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="examSubject" class="form-label">Subjek<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="text" name="examSubject" id="examSubject" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="classId" class="form-label">Kelas<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <select name="classId" id="classId" class="form-select" disabled>
+                                <option value="1" selected>CL-A0IUA</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="examDescription" class="form-label">Deskripsi<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <textarea name="examDescription" id="examDescription" class="form-control"></textarea>
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="file" class="form-label">File<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="file" name="file" id="file" class="form-control" multiple>
+                        </div>
+                        <div class="col-md-12 mt-4 mb-1">
+                            <button class="btn btn-primary" type="button" id="insertExamMaterial" routerLink="/exam/instructor/class-hdr/1/material/">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

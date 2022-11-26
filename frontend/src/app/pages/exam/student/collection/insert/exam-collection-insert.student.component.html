@@ -1,0 +1,43 @@
+<div class="container-fluid bg-light">
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-3 mb-3">
+                <div class="card-header">Upload Jawaban</div>
+                <div class="card-body">
+                    <a routerLink="/exam/student/class-dtl/{{classDtlId}}/schedule"
+                        class="btn btn-secondary mb-4">Kembali</a>
+                    <form class="row" #formInsert="ngForm" (ngSubmit)="formInsert.valid && submit()">
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="classDtlId" class="form-label">Kelas<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <select name="classDtlId" id="classDtlId" class="form-select" required disabled>
+                                <option value="{{classDtlResDto.data.id}}">{{classDtlResDto.data.classesCode}} - {{classDtlResDto.data.classesSubject}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="scheduleId" class="form-label">Jadwal<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <select name="scheduleId" id="scheduleId" class="form-select" required disabled>
+                                <option value="{{examScheduleResDto.data.id}}">{{examScheduleResDto.data.startTime |
+                                    date:'HH:mm:ss dd/MM/yyyy'}} s/d {{examScheduleResDto.data.endTime | date:'HH:mm:ss
+                                    dd/MM/yyyy'}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="file" class="form-label">Jawaban<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="file" name="file" id="file" class="form-control" (change)="fileUpload($event)" required>
+                        </div>
+                        <div class="col-md-12 mt-4 mb-1">
+                            <button [disabled]="formInsert.invalid" class="btn btn-primary" type="submit"
+                                id="insertExamCollection">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

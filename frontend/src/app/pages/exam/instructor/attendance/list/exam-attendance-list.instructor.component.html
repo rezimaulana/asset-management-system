@@ -1,0 +1,42 @@
+<div class="container-fluid bg-light">
+
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-5">
+                <div class="card-header">Absensi</div>
+                <div class="card-body">
+                    <a routerLink="/exam/instructor/class-hdr/{{classHdrId}}/material/{{materialId}}/schedule/" class="btn btn-secondary">Back</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Approval</th>
+                                    <th>Email Siswa</th>
+                                    <th>Nama Siswa</th>
+                                    <th>Aktif</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let d of attendanceListResDto.data ; index as i">
+                                    <td>{{i+1}}</td>
+                                    <td>{{d.approval}}</td>
+                                    <td>{{d.studentEmail}}</td>
+                                    <td>{{d.studentFullname}}</td>
+                                    <td>{{d.isActive}}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary" id="approvAttendance" (click)="submit(d.id, d.ver)">Approve Absensi</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

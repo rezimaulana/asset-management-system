@@ -1,0 +1,75 @@
+<div class="container-fluid bg-light">
+
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Soal Ujian</h5>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a routerLink="/dashboard/instructor" class="btn btn-secondary">Kembali ke Menu Utama</a>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/class-hdr/instructor/detail/{{classHdrId}}">Dashboard
+                                Kelas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                routerLink="/learning/instructor/class-hdr/{{classHdrId}}/material/">Materi Belajar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/quiz/instructor/class-hdr/{{classHdrId}}/material/">Soal
+                                Kuis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/exam/instructor/class-hdr/{{classHdrId}}/material/">Soal
+                                Ujian</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/forum/instructor/class-hdr/{{classHdrId}}">Forum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <a routerLink="/exam/instructor/class-hdr/{{classHdrId}}/material/new" class="btn btn-primary">Create</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Kode</th>
+                                    <th>Subjek</th>
+                                    <th>Aktif</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr *ngFor="let d of examMaterialListResDto.data ; index as i">
+                                    <td>{{i+1}}</td>
+                                    <td>{{d.examCode}}</td>
+                                    <td>{{d.examSubject}}</td>
+                                    <td>{{d.isActive}}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a routerLink="/exam/instructor/class-hdr/{{classHdrId}}/material/detail/{{d.id}}"
+                                                class="btn btn-secondary">Detaill</a>
+                                            <a routerLink="/exam/instructor/class-hdr/{{classHdrId}}/material/{{d.id}}/schedule"
+                                                class="btn btn-secondary">Kelola Jadwal</a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

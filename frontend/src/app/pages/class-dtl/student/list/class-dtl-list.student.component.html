@@ -1,0 +1,38 @@
+<div class="container-fluid bg-light">
+    <div class="row g-1">
+        
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-5">
+                <div class="card-header">
+                    Daftar Kelas
+                </div>
+                <div class="card-body">
+                    <div class="row justify-content-center g-md-5">
+
+                        <div class="col-md-3 mb-1" *ngFor="let d of classDtlListResDto.data ; index as i">
+                            <div class="card text-bg-info">
+                                <div class="card-header">{{d.classesSubject}}</div>
+                                <div class="text-center">
+                                    <ng-template [ngIf]="d.fileId !== null">
+                                        <img src="{{fileDownload}}{{d.fileId}}" class="class-hdr-img-top"
+                                            alt="no-image">
+                                    </ng-template>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{d.classesCode}}</h5>
+                                    <a class="btn btn-primary" routerLink="/class-dtl/student/detail/{{d.id}}">Dashboard
+                                        Kelas</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">{{d.email}} - {{d.fullname}}</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

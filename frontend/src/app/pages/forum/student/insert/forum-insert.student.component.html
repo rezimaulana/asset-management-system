@@ -1,0 +1,44 @@
+<div class="container-fluid bg-light">
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card">
+                <div class="card-header">Buat Forum</div>
+                <div class="card-body">
+                    <a routerLink="/forum/student/class-dtl/1" class="btn btn-secondary mb-4">Kembali</a>
+                    <form class="row">
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="subject" class="form-label">Judul<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="text" name="subject" id="subject" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="classDtlId" class="form-label">Kelas<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <select name="classDtlId" id="classDtlId" class="form-select">
+                                <option>Pilih Kelas</option>
+                                <option value="1">CL-A0IUA Spring Boot</option>
+                                <option value="2">CL-ASDSA Docker: Kubernetes dan Swarm</option>
+                                <option value="3">CL-HDY12 Angular & NodeJS - MEAN Stack</option>
+                                <option value="4">CL-BXHSA NodeJS</option>
+                                <option value="5">CL-JSISA MongoDB - Panduan Developer 2022</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="description" class="form-label">Konten<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <textarea name="description" id="description" class="form-control"></textarea>
+                        </div>
+                        <div class="col-md-12 mt-4 mb-1">
+                            <button class="btn btn-primary" type="button" id="insertForum" routerLink="/forum/student/class-dtl/1">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

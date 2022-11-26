@@ -1,0 +1,127 @@
+<div class="container-fluid bg-light">
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-5">
+                <div class="card-header">Data Kelas</div>
+                <div class="card-body">
+                    <a routerLink="/class-hdr/super-admin/new" class="btn btn-primary">Create</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Kode</th>
+                                    <th>Subjek</th>
+                                    <th>Deskripsi</th>
+                                    <th>Email Guru</th>
+                                    <th>Nama Guru</th>
+                                    <th>Logo</th>
+                                    <th>Aktif</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>CL-A0IUA</td>
+                                    <td>Spring Boot</td>
+                                    <td>Spring 5: Pelajari Spring 5 Core, AOP, Spring MVC, Spring Security, Spring REST, Spring Boot 2, Thymeleaf, JPA & Hibernate</td>
+                                    <td>yanuar@email.com</td>
+                                    <td>Yanuar Fadhilah</td>
+                                    <td>1</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a routerLink="/class-hdr/super-admin/edit/1" class="btn btn-primary">Update</a>
+                                            <a class="btn btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>CL-ASDSA</td>
+                                    <td>Docker: Kubernetes dan Swarm</td>
+                                    <td>Bangun, uji, terapkan container dengan kursus mega terbaik di Docker, Kubernetes, Compose, Swarm, dan Registry menggunakan DevOps</td>
+                                    <td>aldi@email.com</td>
+                                    <td>Aldi Rizkiaman</td>
+                                    <td>2</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary">Update</a>
+                                            <a class="btn btn-danger">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>CL-HDY12</td>
+                                    <td>Angular & NodeJS - MEAN Stack</td>
+                                    <td>Beralih dari Desain ke Kode dan Bangun Aplikasi Web yang Indah</td>
+                                    <td>anasda@email.com</td>
+                                    <td>Anasda Yoga</td>
+                                    <td>3</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary">Update</a>
+                                            <a class="btn btn-danger">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>CL-BXHSA</td>
+                                    <td>NodeJS</td>
+                                    <td>Kuasai Node JS & Deno.js, bangun REST API dengan Node.js, GraphQL API, tambahkan Otentikasi, gunakan MongoDB, SQL & banyak lagi!</td>
+                                    <td>ghani@email.com</td>
+                                    <td>Ghani Rizqan</td>
+                                    <td>2</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary">Update</a>
+                                            <a class="btn btn-danger">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>CL-JSISA</td>
+                                    <td>MongoDB - Panduan Developer 2022</td>
+                                    <td>MongoDB untuk Web & Aplikasi Seluler. Operasi CRUD, Indeks, Kerangka Agregasi - Semua tentang MongoDB!</td>
+                                    <td>gilang@email.com</td>
+                                    <td>Gilang Chandra Wijaya</td>
+                                    <td>5</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary">Update</a>
+                                            <a class="btn btn-danger">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Apakah anda akan menghapus data ini?
+                </div>
+                <div class="modal-footer justify-content-md-start">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Ya</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

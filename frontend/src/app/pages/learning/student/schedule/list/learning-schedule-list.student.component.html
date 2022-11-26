@@ -1,0 +1,70 @@
+<div class="container-fluid bg-light">
+
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Jadwal Belajar</h5>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a routerLink="/dashboard/student" class="btn btn-secondary">Kembali ke Menu Utama</a>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/class-dtl/student/detail/{{classDtlId}}">Dashboard Kelas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/learning/student/class-dtl/{{classDtlId}}/schedule/">Materi Belajar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/quiz/student/class-dtl/{{classDtlId}}/schedule/">Soal Kuis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/exam/student/class-dtl/{{classDtlId}}/schedule/">Soal Ujian</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/forum/student/class-dtl/{{classDtlId}}">Forum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Kode</th>
+                                    <th>Subjek</th>
+                                    <th>Waktu Mulai</th>
+                                    <th>Waktu Akhir</th>
+                                    <th>Aktif</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let d of learningScheduleListResDto.data ; index as i">
+                                    <td>{{i+1}}</td>
+                                    <td>{{d.learningCode}}</td>
+                                    <td>{{d.learningSubject}}</td>
+                                    <td>{{d.startTime | date:'HH:mm:ss dd/MM/yyyy'}}</td>
+                                    <td>{{d.endTime | date:'HH:mm:ss dd/MM/yyyy'}}</td>
+                                    <td>{{d.isActive}}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="submit" class="btn btn-primary" id="insertAttendanceLearning" (click)="insert(classDtlId, d.id)">Absen Jadwal</button>
+                                            <a routerLink="/learning/student/class-dtl/{{classDtlId}}/schedule/{{d.id}}/material/detail/{{d.learningId}}" class="btn btn-secondary">Materi Belajar</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

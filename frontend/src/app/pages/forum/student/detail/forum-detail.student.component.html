@@ -1,0 +1,164 @@
+<div class="container-fluid bg-light">
+
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>CL-A0IUA : Spring Boot</h5>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a routerLink="/forum/student/class-dtl/1" class="btn btn-secondary">Kembali</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Guru :
+                        <span class="badge text-bg-info">Yanuar Fadhilah</span>
+                        <span class="badge text-bg-info">yanuar@email.com</span>
+                    </li>
+                    <li class="list-group-item">Siswa :
+                        <span class="badge text-bg-info">siswa</span>
+                        <span class="badge text-bg-info">siswa@email.com</span>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <h5 class="card-title">Konfigurasi port untuk aplikasi</h5>
+                    <p class="card-text">
+                        Bagaimana cara konfigurasi port TCP/IP yang pada aplikasi Spring Boot, sehingga tidak
+                        menggunakan port default 8080?
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">2022-09-20 14:00:03</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1 mt-3">
+            <div class="card">
+                <div class="card-header">
+                    Tambah Komentar
+                </div>
+                <div class="card-body">
+                    <form class="row">
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="content" class="form-label">Konten<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-10 mt-1 mb-1">
+                            <textarea name="content" id="content" class="form-control"></textarea>
+                        </div>
+                        <div class="col-md-12 mt-4 mb-1">
+                            <button class="btn btn-primary" type="button" id="insertComment" routerLink="/forum/student/class-dtl/1/detail/1">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 offset-md-1 mt-3">
+            <div class="card">
+                <div class="card-header">
+                    Komentar
+                </div>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card text-bg-primary mb-3">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../../assets/images/profile.png" id="profile" alt="foto">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    siswa
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <span class="badge rounded-pill text-bg-light">2022-10-20
+                                                        21:01:00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Saya menggunakan mode variabel lingkungan OS: $ SERVER_PORT=8090 Java -jar
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card text-bg-primary mb-3">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../../assets/images/profile.png" id="profile" alt="foto">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    siswa
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <span class="badge rounded-pill text-bg-light">2022-10-20
+                                                        21:01:00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Dserver.port=XXXX tidak bekerja untuk saya.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mt-3 offset-md-8 mt-3">
+                            <div class="card text-bg-primary mb-3">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src="../../assets/images/profile.png" id="profile" alt="foto">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    Yanuar Fadhilah
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <span class="badge rounded-pill text-bg-light">2022-10-20
+                                                        21:00:00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Seperti yang dikatakan dalam dokumen, atur server.port sebagai properti sistem menggunakan opsi baris perintah ke jvm -Dserver.port=8090 atau tambahkan application.properties di /src/main/resources/
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

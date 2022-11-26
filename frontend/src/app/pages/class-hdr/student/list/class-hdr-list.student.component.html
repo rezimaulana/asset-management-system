@@ -1,0 +1,39 @@
+<div class="container-fluid bg-light">
+
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-5">
+                <div class="card-header">
+                    Daftar Kelas
+                </div>
+                <div class="card-body">
+                    <div class="row justify-content-center g-md-5">
+
+                        <div class="col-md-3 mb-1" *ngFor="let d of classHdrListResDto.data ; index as i">
+                            <div class="card text-bg-info">
+                                <div class="card-header">{{d.subject}}</div>
+                                <div class="text-center">
+                                    <ng-template [ngIf]="d.fileId !== null">
+                                        <img src="{{fileDownload}}{{d.fileId}}" class="class-hdr-img-top"
+                                            alt="no-image">
+                                    </ng-template>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{d.code}}</h5>
+                                    <p class="card-text">{{d.description}}</p>
+                                    <button type="submit" class="btn btn-primary" id="enrollClasses"
+                                        (click)="submit(d.id)">Daftar Kelas</button>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">{{d.email}} - {{d.fullname}}</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

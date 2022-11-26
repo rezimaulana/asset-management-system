@@ -1,0 +1,51 @@
+<div class="container-fluid bg-light">
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-3">
+                <div class="card-header">Tambah Materi</div>
+                <div class="card-body">
+                    <a routerLink="/quiz/instructor/class-hdr/1/material/" class="btn btn-secondary mb-4">Kembali</a>
+                    <form class="row">
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="quizCode" class="form-label">Kode<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="text" name="quizCode" id="quizCode" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="quizSubject" class="form-label">Subjek<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="text" name="quizSubject" id="quizSubject" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="classId" class="form-label">Kelas<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <select name="classId" id="classId" class="form-select" disabled>
+                                <option value="1" selected>CL-A0IUA</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="quizDescription" class="form-label">Deskripsi<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <textarea name="quizDescription" id="quizDescription" class="form-control"></textarea>
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="file" class="form-label">File<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="file" name="file" id="file" class="form-control" multiple>
+                        </div>
+                        <div class="col-md-12 mt-4 mb-1">
+                            <button class="btn btn-primary" type="button" id="insertQuizMaterial"
+                                routerLink="/quiz/instructor/class-hdr/1/material/">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

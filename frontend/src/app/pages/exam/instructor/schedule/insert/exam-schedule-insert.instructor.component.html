@@ -1,0 +1,39 @@
+<div class="container-fluid bg-light">
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-3">
+                <div class="card-header">Buat Jadwal</div>
+                <div class="card-body">
+                    <a routerLink="/exam/instructor/class-hdr/1/material/1/schedule" class="btn btn-secondary mb-4">Kembali</a>
+                    <form class="row">
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="startTime" class="form-label">Waktu Mulai<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="datetime-local" name="startTime" id="startTime" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="endTime" class="form-label">Waktu Akhir<span
+                                    class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="datetime-local" name="endTime" id="endTime" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="examId" class="form-label">Materi Ujian<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <select name="examId" id="examId" class="form-select" disabled>
+                                <option value="1" selected>EX-AXDAS Spring Boot - Basic</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 mt-4 mb-1">
+                            <button class="btn btn-primary" type="button" id="insertExamSchedule" routerLink="/exam/instructor/class-hdr/1/material/1/schedule">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

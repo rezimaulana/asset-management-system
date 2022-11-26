@@ -1,0 +1,36 @@
+<div class="container-fluid bg-light">
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-3 mb-3">
+                <div class="card-header">Perbarui Nilai</div>
+                <div class="card-body">
+                    <a routerLink="/quiz/instructor/class-hdr/1/material/1/schedule/1/collection" class="btn btn-secondary mb-4">Kembali</a>
+                    <form class="row">
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="score" class="form-label">Nilai<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input type="number" name="score" id="score" class="form-control">
+                        </div>
+                        <div class="col-md-2 mt-1 mb-1">
+                            <label for="isActive" class="form-label">Aktif<span class="text-danger">*</span></label>
+                        </div>
+                        <div class="col-md-4 mt-1 mb-1">
+                            <input class="form-check-input" type="radio" name="isActive" id="true" checked>
+                            <label class="form-check-label" for="true">
+                                True
+                            </label>
+                            <input class="form-check-input" type="radio" name="isActive" id="false">
+                            <label class="form-check-label" for="false">
+                                False
+                            </label>
+                        </div>
+                        <div class="col-md-12 mt-4 mb-1">
+                            <button class="btn btn-primary" type="button" id="updateScore" routerLink="/quiz/instructor/class-hdr/1/material/1/schedule/1/collection/edit/1">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

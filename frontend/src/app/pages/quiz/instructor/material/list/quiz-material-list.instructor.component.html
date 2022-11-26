@@ -1,0 +1,122 @@
+<div class="container-fluid bg-light">
+
+    <div class="row g-1">
+        <div class="col-md-10 offset-md-1">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Soal Kuis</h5>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a routerLink="/dashboard/instructor" class="btn btn-secondary">Kembali ke Menu
+                                Utama</a>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/class-hdr/instructor/detail/1">Dashboard Kelas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/learning/instructor/class-hdr/1/material/">Materi
+                                Belajar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/quiz/instructor/class-hdr/1/material/">Soal Kuis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/exam/instructor/class-hdr/1/material/">Soal Ujian</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/forum/instructor/class-hdr/1">Forum</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <a routerLink="/quiz/instructor/class-hdr/1/material/new" class="btn btn-primary">Create</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Kode</th>
+                                    <th>Subjek</th>
+                                    <th>Aktif</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>QZ-AXDAS</td>
+                                    <td>Spring Boot - Basic</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a routerLink="/quiz/instructor/class-hdr/1/material/detail/1"
+                                                class="btn btn-secondary">Detaill</a>
+                                            <a routerLink="/quiz/instructor/class-hdr/1/material/1/schedule"
+                                                class="btn btn-secondary">Kelola Jadwal</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>QZ-ASKJK</td>
+                                    <td>Spring Boot - Rest</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <div class="btn-group">
+                                                <a class="btn btn-secondary">Detaill</a>
+                                                <a class="btn btn-secondary">Kelola
+                                                    Jadwal</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>QZ-LI0PL</td>
+                                    <td>Spring Boot - Security</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-secondary">Detaill</a>
+                                            <a class="btn btn-secondary">Kelola Jadwal</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>QZ-TUQIQ</td>
+                                    <td>Spring Boot - MVC</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-secondary">Detaill</a>
+                                            <a class="btn btn-secondary">Kelola Jadwal</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>QZ-ALAKS</td>
+                                    <td>Spring Boot - AOP</td>
+                                    <td>true</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-secondary">Detaill</a>
+                                            <a class="btn btn-secondary">Kelola Jadwal</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
