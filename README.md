@@ -66,7 +66,32 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `rezimaulana`, `e-learning`, `rezimaulana`, `rezimaulana`, `gmail`, `rsazrm`, `E-Learning`, `project_description`
+The following is a brief description of the problem and system flow
+* Requirements :
+  ```sh
+  1. User roles consist of students, teachers and super admins
+  2. Students must register independently first
+  3. Students can choose (enroll) available classes
+  4. Students must attend first (and their attendance must be approved by the teacher) to be able to (download material or download and do quizzes / tests)
+  5. The teacher adds material (start date, end date, material file), quiz (start date, end date, quiz file) and test (start date, end date, quiz file)
+  6. Teachers can see the results of quizzes and tests and can immediately give their grades
+  7. Private forums per class are created by students and are text only. And only the teacher and students can see and reply to each other in the forum.
+  8. Required reports:
+    a) Student attendance
+    b) Student grades
+    c) Schedule of Teaching and Learning Activities (KBM) for admin per teacher
+  9. Super admin creates a class and assigns the teacher
+  10. Teachers must first be registered by the super admin
+  11. Materials and quizzes are daily in nature while tests are weekly
+```
+* Technology used:
+```sh
+1. Java 8 Spring Boot
+2.Angular 9
+3.Postgresql 11
+4. JWTs
+5. Jasper Reports
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,12 +110,15 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
+* Java
+  ```sh
+  Java 11 is recommended
+  ```
 * npm
   ```sh
   npm install npm@latest -g
@@ -98,18 +126,21 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/rezimaulana/e-learning.git
    ```
-3. Install NPM packages
+2. Install NPM packages on /frontend
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Build using maven on /backend
+   ```sh
+   mvn clean install
+   ```
+4. Run jar using java 11 /backend/target/
+   ```sh
+   java -jar filename.jar
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -119,9 +150,9 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Still working useful examples of how this project can be used. Additional screenshots, code examples and demos will be provided in this space. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_Please refer here on the future to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,10 +161,14 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Backend
+    - [x] Database
+    - [x] Master API
+    - [ ] Transaction API
+- [x] Frontend
+    - [x] Page Layout
+    - [x] Routing
+    - [ ] Connect all feature
 
 See the [open issues](https://github.com/rezimaulana/e-learning/issues) for a full list of proposed features (and known issues).
 
@@ -171,7 +206,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@rezimaulana](https://twitter.com/rezimaulana) - rsazrm@gmail.com
+Maulana Rezi Rosadi - [@rezimaulana](https://twitter.com/rezimaulana) - rsazrm@gmail.com
 
 Project Link: [https://github.com/rezimaulana/e-learning](https://github.com/rezimaulana/e-learning)
 
@@ -182,9 +217,17 @@ Project Link: [https://github.com/rezimaulana/e-learning](https://github.com/rez
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+
+I've included a few of resources that i find helpful:
+
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+* [Malven's Grid Cheatsheet](https://grid.malven.co/)
+* [Img Shields](https://shields.io)
+* [GitHub Pages](https://pages.github.com)
+* [Font Awesome](https://fontawesome.com)
+* [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
