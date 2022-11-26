@@ -87,8 +87,8 @@ The following is a brief description of the problem and system flow
 * Technology used :
   ```sh
   1. Java 8 Spring Boot
-  2.Angular 9
-  3.Postgresql 11
+  2. Angular 12
+  3. Postgresql 14
   4. JWTs
   5. Jasper Reports
   ```
