@@ -332,6 +332,7 @@ id serial,
 comment text NOT NULL,
 
 forum_id int NOT NULL,
+user_id int NOT NULL,
 
 created_by int NOT NULL,
 created_at timestamp WITHOUT TIME ZONE NOT NULL,
@@ -342,6 +343,7 @@ is_active boolean NOT NULL DEFAULT TRUE
 );
 ALTER TABLE comments ADD CONSTRAINT comments_pk PRIMARY KEY(id);
 ALTER TABLE comments ADD CONSTRAINT forums_comments_fk FOREIGN KEY(forum_id) REFERENCES forums(id);
+ALTER TABLE comments ADD CONSTRAINT users_comments_fk FOREIGN KEY(user_id) REFERENCES users(id);
 
 --DML
 INSERT INTO roles (role_code, role_name, created_by, created_at) VALUES
@@ -351,42 +353,7 @@ INSERT INTO roles (role_code, role_name, created_by, created_at) VALUES
 ('ROL004', 'System', 1, now());
 
 INSERT INTO users (email, password, fullname, role_id, created_by, created_at) VALUES
-('system@rezimaulana.link', '$2a$10$mQ77inhXemDEE0zlr9kwc.94nqJERo1uHIsaPjesr0upzK1Hm6cWa', 'USERSYSTEM', 4, 1, now()),
-('admin@email.com', '$2a$10$mQ77inhXemDEE0zlr9kwc.94nqJERo1uHIsaPjesr0upzK1Hm6cWa', 'Super Admin', 1, 1, now()),
-('siswa@email.com', '$2a$10$mQ77inhXemDEE0zlr9kwc.94nqJERo1uHIsaPjesr0upzK1Hm6cWa', 'Student', 3, 1, now()),
-('guru@email.com', '$2a$10$mQ77inhXemDEE0zlr9kwc.94nqJERo1uHIsaPjesr0upzK1Hm6cWa', 'Instructor', 2, 2, now());
-
---INSERT INTO classes (class_code, class_subject, class_description, instructor_id, created_by, created_at) VALUES
---('CLS005', 'Kelas Java', 'Java Essentials on 1 Month', 4, 2, now());
---
---INSERT INTO learning_material (learning_code, learning_subject, learning_description, class_id, created_by, created_at) VALUES
---('LMA001', 'Belajar Java 1', 'Deskripsi.', 1, 4, now());
---
---INSERT INTO quiz_material (quiz_code, quiz_subject, quiz_description, class_id, created_by, created_at) VALUES
---('QUZ001', 'Quiz Java 1', 'Deskripsi.', 1, 4, now());
---
---INSERT INTO exam_material (exam_code, exam_subject, exam_description, class_id, created_by, created_at) VALUES
---('EXM001', 'Exam Java 1', 'Deskripsi.', 1, 4, now());
---
---INSERT INTO learning_schedule (start_time, end_time, learning_id, created_by, created_at) VALUES
---(now() + interval '1 day', now() + interval '2 day', 1, 4, now());
---
---INSERT INTO quiz_schedule (start_time, end_time, quiz_id, created_by, created_at) VALUES
---(now() + interval '1 day', now() + interval '2 day', 1, 4, now());
---
---INSERT INTO exam_schedule (start_time, end_time, exam_id, created_by, created_at) VALUES
---(now() + interval '1 day', now() + interval '2 day', 1, 4, now());
---
---INSERT INTO files (file_code, file_ext, created_by, created_at) VALUES
---('file', 'pdf', 4, now()),
---('file', 'pdf', 4, now()),
---('file', 'pdf', 4, now());
---
---INSERT INTO learning_attach (learning_id, file_id, created_by, created_at) VALUES
---(1, 1, 4, now());
---
---INSERT INTO quiz_attach (quiz_id, file_id, created_by, created_at) VALUES
---(1, 2, 4, now());
---
---INSERT INTO exam_attach (exam_id, file_id, created_by, created_at) VALUES
---(1, 3, 4, now());
+('system@gmail.com', '$2a$10$mQ77inhXemDEE0zlr9kwc.94nqJERo1uHIsaPjesr0upzK1Hm6cWa', 'USERSYSTEM', 4, 1, now()),
+('admin@gmail.com', '$2a$10$mQ77inhXemDEE0zlr9kwc.94nqJERo1uHIsaPjesr0upzK1Hm6cWa', 'Super Admin', 1, 1, now()),
+('siswa@gmail.com', '$2a$10$mQ77inhXemDEE0zlr9kwc.94nqJERo1uHIsaPjesr0upzK1Hm6cWa', 'Student', 3, 1, now()),
+('guru@gmail.com', '$2a$10$mQ77inhXemDEE0zlr9kwc.94nqJERo1uHIsaPjesr0upzK1Hm6cWa', 'Instructor', 2, 2, now());
