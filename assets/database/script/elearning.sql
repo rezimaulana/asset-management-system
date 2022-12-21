@@ -1,4 +1,3 @@
-
 --DDL
 CREATE TABLE roles(
 id serial,
